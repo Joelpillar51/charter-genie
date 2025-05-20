@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckIcon, ShieldCheckIcon } from "lucide-react";
+import { Check, CheckIcon, ShieldCheckIcon, X } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -247,13 +247,13 @@ const Index = () => {
                 Choose the plan that's right for your business
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {/* Free Plan */}
               <div className="border rounded-xl p-8 flex flex-col h-full">
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold">Free</h3>
+                <div className="mb-4">
+                  <h3 className="text-2xl font-bold">Free Plan</h3>
                   <p className="text-muted-foreground mt-2">
-                    For individuals and startups
+                    Forever Free
                   </p>
                 </div>
                 <div className="mb-6">
@@ -262,16 +262,20 @@ const Index = () => {
                 </div>
                 <ul className="space-y-3 mb-8 flex-grow">
                   <li className="flex items-center">
-                    <CheckIcon className="h-5 w-5 text-primary mr-2" />
-                    <span>3 document generations per month</span>
+                    <Check className="h-5 w-5 text-primary mr-2" />
+                    <span>1 hosted legal document</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckIcon className="h-5 w-5 text-primary mr-2" />
+                    <Check className="h-5 w-5 text-primary mr-2" />
                     <span>Basic customization</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckIcon className="h-5 w-5 text-primary mr-2" />
-                    <span>Email support</span>
+                    <Check className="h-5 w-5 text-primary mr-2" />
+                    <span>Public hosted link</span>
+                  </li>
+                  <li className="flex items-center">
+                    <X className="h-5 w-5 text-muted-foreground mr-2" />
+                    <span className="text-muted-foreground">No logo / PDF export</span>
                   </li>
                 </ul>
                 <Button asChild variant="outline" className="w-full">
@@ -279,15 +283,50 @@ const Index = () => {
                 </Button>
               </div>
 
-              {/* Pro Plan */}
-              <div className="border border-primary rounded-xl p-8 flex flex-col h-full bg-primary/5">
-                <div className="absolute -mt-10 ml-6 px-2 py-1 rounded-md text-xs font-semibold bg-primary text-white">
+              {/* Starter Plan */}
+              <div className="border border-primary rounded-xl p-8 flex flex-col h-full bg-primary/5 relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">
                   MOST POPULAR
                 </div>
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold">Pro</h3>
+                <div className="mb-4">
+                  <h3 className="text-2xl font-bold">Starter</h3>
                   <p className="text-muted-foreground mt-2">
                     For growing businesses
+                  </p>
+                </div>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold">$9</span>
+                  <span className="text-muted-foreground">/month</span>
+                </div>
+                <ul className="space-y-3 mb-8 flex-grow">
+                  <li className="flex items-center">
+                    <Check className="h-5 w-5 text-primary mr-2" />
+                    <span>Up to 10 hosted policies</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-5 w-5 text-primary mr-2" />
+                    <span>Custom logo & styling</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-5 w-5 text-primary mr-2" />
+                    <span>Export to PDF</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-5 w-5 text-primary mr-2" />
+                    <span>Remove CharterGenie branding</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full">
+                  <Link to="/signup">Get Started</Link>
+                </Button>
+              </div>
+
+              {/* Agency Plan */}
+              <div className="border rounded-xl p-8 flex flex-col h-full">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-bold">Agency</h3>
+                  <p className="text-muted-foreground mt-2">
+                    For teams and agencies
                   </p>
                 </div>
                 <div className="mb-6">
@@ -296,30 +335,31 @@ const Index = () => {
                 </div>
                 <ul className="space-y-3 mb-8 flex-grow">
                   <li className="flex items-center">
-                    <CheckIcon className="h-5 w-5 text-primary mr-2" />
-                    <span>Unlimited document generations</span>
+                    <Check className="h-5 w-5 text-primary mr-2" />
+                    <span>Unlimited hosted policies</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckIcon className="h-5 w-5 text-primary mr-2" />
-                    <span>Advanced customization</span>
+                    <Check className="h-5 w-5 text-primary mr-2" />
+                    <span>Team / client folders</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckIcon className="h-5 w-5 text-primary mr-2" />
-                    <span>Remove CharterGenie branding</span>
+                    <Check className="h-5 w-5 text-primary mr-2" />
+                    <span>White-labeled links</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckIcon className="h-5 w-5 text-primary mr-2" />
+                    <Check className="h-5 w-5 text-primary mr-2" />
                     <span>Priority support</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckIcon className="h-5 w-5 text-primary mr-2" />
-                    <span>Document version history</span>
-                  </li>
                 </ul>
-                <Button asChild className="w-full">
+                <Button asChild variant="outline" className="w-full">
                   <Link to="/signup">Get Started</Link>
                 </Button>
               </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Button asChild variant="outline">
+                <Link to="/pricing">View Full Pricing Details</Link>
+              </Button>
             </div>
           </div>
         </section>
