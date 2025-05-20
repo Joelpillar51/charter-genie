@@ -38,103 +38,105 @@ const Features = () => {
         {/* Features Section */}
         <section className="py-16 md:py-24">
           <div className="container px-4 md:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Feature 1 */}
-              <div className="feature-card border-0 shadow-none hover:shadow-none p-0 items-start text-left">
-                <div className="p-3 mb-4 rounded-full bg-primary/10 inline-flex">
+              <div className="feature-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-200">
+                <div className="p-3 mb-5 rounded-full bg-primary/10 inline-flex">
                   <FileTextIcon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">AI-Powered Policy Generator</h3>
-                <p className="text-muted-foreground mb-3">
+                <h3 className="text-xl font-semibold mb-3">AI-Powered Policy Generator</h3>
+                <p className="text-muted-foreground mb-4">
                   Effortlessly create <strong>GDPR</strong>, <strong>CCPA</strong>, <strong>Privacy Policy</strong>, <strong>Terms of Service</strong>, and <strong>Cookie Policies</strong> with just a few prompts.
                 </p>
-                <p className="bg-slate-100 dark:bg-slate-800 p-3 rounded-md italic text-sm">
+                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-md italic text-sm">
                   ⚡ No legal jargon needed — we simplify it for your audience and your jurisdiction.
-                </p>
+                </div>
               </div>
 
               {/* Feature 2 */}
-              <div className="feature-card border-0 shadow-none hover:shadow-none p-0 items-start text-left">
-                <div className="p-3 mb-4 rounded-full bg-primary/10 inline-flex">
+              <div className="feature-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-200">
+                <div className="p-3 mb-5 rounded-full bg-primary/10 inline-flex">
                   <Settings2Icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">One-Click Document Customization</h3>
-                <p className="text-muted-foreground mb-3">
+                <h3 className="text-xl font-semibold mb-3">One-Click Document Customization</h3>
+                <p className="text-muted-foreground mb-4">
                   Add your business name, industry, and compliance needs — and CharterGenie adapts the language instantly.
                 </p>
-                <p className="bg-slate-100 dark:bg-slate-800 p-3 rounded-md italic text-sm">
+                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-md italic text-sm">
                   ✍️ Tailored legal content without needing a lawyer.
-                </p>
+                </div>
               </div>
 
               {/* Feature 3 */}
-              <div className="feature-card border-0 shadow-none hover:shadow-none p-0 items-start text-left">
-                <div className="p-3 mb-4 rounded-full bg-primary/10 inline-flex">
+              <div className="feature-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-200">
+                <div className="p-3 mb-5 rounded-full bg-primary/10 inline-flex">
                   <GlobeIcon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Built for Global Compliance</h3>
-                <p className="text-muted-foreground mb-3">
+                <h3 className="text-xl font-semibold mb-3">Built for Global Compliance</h3>
+                <p className="text-muted-foreground mb-4">
                   Generate policies that align with laws across <strong>the US, EU, Canada, UK</strong>, and more.
                 </p>
-                <p className="bg-slate-100 dark:bg-slate-800 p-3 rounded-md italic text-sm">
+                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-md italic text-sm">
                   🌍 Stay compliant anywhere your users are.
-                </p>
+                </div>
               </div>
 
               {/* Feature 4 */}
-              <div className="feature-card border-0 shadow-none hover:shadow-none p-0 items-start text-left">
-                <div className="p-3 mb-4 rounded-full bg-primary/10 inline-flex">
+              <div className="feature-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-200">
+                <div className="p-3 mb-5 rounded-full bg-primary/10 inline-flex">
                   <SaveIcon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Save & Manage Documents in One Place</h3>
-                <p className="text-muted-foreground mb-3">
+                <h3 className="text-xl font-semibold mb-3">Save & Manage Documents in One Place</h3>
+                <p className="text-muted-foreground mb-4">
                   Your dashboard stores every policy you've ever generated — edit, re-download, or export anytime.
                 </p>
-                <p className="bg-slate-100 dark:bg-slate-800 p-3 rounded-md italic text-sm">
+                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-md italic text-sm">
                   🗃️ No more digging through emails or outdated docs.
-                </p>
+                </div>
               </div>
 
               {/* Feature 5 */}
-              <div className="feature-card border-0 shadow-none hover:shadow-none p-0 items-start text-left">
-                <div className="p-3 mb-4 rounded-full bg-primary/10 inline-flex">
+              <div className="feature-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-200">
+                <div className="p-3 mb-5 rounded-full bg-primary/10 inline-flex">
                   <Settings2Icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Auto-Sync Updates (Coming Soon)</h3>
-                <p className="text-muted-foreground mb-3">
+                <h3 className="text-xl font-semibold mb-3">Auto-Sync Updates (Coming Soon)</h3>
+                <p className="text-muted-foreground mb-4">
                   We'll notify you (or auto-update) when regulations change — so your policies stay compliant.
                 </p>
-                <p className="bg-slate-100 dark:bg-slate-800 p-3 rounded-md italic text-sm">
+                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-md italic text-sm">
                   🔄 Stay future-proof with zero effort.
-                </p>
+                </div>
               </div>
 
               {/* Feature 6 */}
-              <div className="feature-card border-0 shadow-none hover:shadow-none p-0 items-start text-left">
-                <div className="p-3 mb-4 rounded-full bg-primary/10 inline-flex">
+              <div className="feature-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-200">
+                <div className="p-3 mb-5 rounded-full bg-primary/10 inline-flex">
                   <CodeIcon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Simple Embed Code</h3>
-                <p className="text-muted-foreground mb-3">
+                <h3 className="text-xl font-semibold mb-3">Simple Embed Code</h3>
+                <p className="text-muted-foreground mb-4">
                   Drop a lightweight code snippet into your site to display your legal policies automatically.
                 </p>
-                <p className="bg-slate-100 dark:bg-slate-800 p-3 rounded-md italic text-sm">
+                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-md italic text-sm">
                   💡 No developer? No problem.
-                </p>
+                </div>
               </div>
-
-              {/* Feature 7 */}
-              <div className="feature-card border-0 shadow-none hover:shadow-none p-0 items-start text-left col-span-1 md:col-span-2">
-                <div className="p-3 mb-4 rounded-full bg-primary/10 inline-flex">
+            </div>
+            
+            {/* Feature 7 - Full width */}
+            <div className="mt-8">
+              <div className="feature-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-200">
+                <div className="p-3 mb-5 rounded-full bg-primary/10 inline-flex">
                   <UsersIcon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Friendly for Non-Lawyers</h3>
-                <p className="text-muted-foreground mb-3">
+                <h3 className="text-xl font-semibold mb-3">Friendly for Non-Lawyers</h3>
+                <p className="text-muted-foreground mb-4">
                   Built for solo founders, SaaS builders, agencies, and creators — not law firms.
                 </p>
-                <p className="bg-slate-100 dark:bg-slate-800 p-3 rounded-md italic text-sm">
+                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-md italic text-sm">
                   🛠️ We keep it human and practical.
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -153,51 +155,42 @@ const Features = () => {
               <Table className="border rounded-lg overflow-hidden">
                 <TableHeader className="bg-muted/50">
                   <TableRow>
-                    <TableHead className="w-[300px] font-medium">Feature</TableHead>
-                    <TableHead className="text-center font-medium">CharterGenie 🟢</TableHead>
-                    <TableHead className="text-center font-medium">Competitors 🔴</TableHead>
+                    <TableHead className="font-medium">Feature</TableHead>
+                    <TableHead className="text-center font-medium">CharterGenie</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   <TableRow>
                     <TableCell className="font-medium">Designed for Solo/SaaS Users</TableCell>
                     <TableCell className="text-center">✅ Yes</TableCell>
-                    <TableCell className="text-center">❌ Mostly legal teams</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Pay-as-you-grow pricing</TableCell>
                     <TableCell className="text-center">✅ Yes</TableCell>
-                    <TableCell className="text-center">❌ Often overpriced</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">AI prompts tailored by industry</TableCell>
                     <TableCell className="text-center">✅ Yes</TableCell>
-                    <TableCell className="text-center">❌ Generic output</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Auto-update policies</TableCell>
                     <TableCell className="text-center">✅ Planned</TableCell>
-                    <TableCell className="text-center">❌ Manual updates required</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">No confusing legal jargon</TableCell>
                     <TableCell className="text-center">✅ Yes</TableCell>
-                    <TableCell className="text-center">❌ Hard to understand</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Modern UI & document dashboard</TableCell>
                     <TableCell className="text-center">✅ Yes</TableCell>
-                    <TableCell className="text-center">❌ Outdated/Complex UI</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Quick setup (under 5 mins)</TableCell>
                     <TableCell className="text-center">✅ Yes</TableCell>
-                    <TableCell className="text-center">❌ Long onboarding</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">No hidden fees or surprise paywalls</TableCell>
                     <TableCell className="text-center">✅ Yes</TableCell>
-                    <TableCell className="text-center">❌ Often locked features</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -214,20 +207,20 @@ const Features = () => {
               </h2>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              <div className="p-6 border rounded-xl text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              <div className="p-6 border rounded-xl text-center shadow-sm hover:shadow-md transition-all duration-200">
                 <p className="font-semibold">Solo founders launching MVPs</p>
               </div>
-              <div className="p-6 border rounded-xl text-center">
+              <div className="p-6 border rounded-xl text-center shadow-sm hover:shadow-md transition-all duration-200">
                 <p className="font-semibold">Designers, devs, and SaaS builders</p>
               </div>
-              <div className="p-6 border rounded-xl text-center">
+              <div className="p-6 border rounded-xl text-center shadow-sm hover:shadow-md transition-all duration-200">
                 <p className="font-semibold">Agencies creating multiple client sites</p>
               </div>
-              <div className="p-6 border rounded-xl text-center">
+              <div className="p-6 border rounded-xl text-center shadow-sm hover:shadow-md transition-all duration-200">
                 <p className="font-semibold">Indie hackers & no-code creators</p>
               </div>
-              <div className="p-6 border rounded-xl text-center">
+              <div className="p-6 border rounded-xl text-center shadow-sm hover:shadow-md transition-all duration-200">
                 <p className="font-semibold">Anyone who just wants to be compliant fast</p>
               </div>
             </div>
