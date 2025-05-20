@@ -16,6 +16,7 @@ import GeneratePolicy from "./pages/GeneratePolicy";
 import Documents from "./pages/Documents";
 import Account from "./pages/Account";
 import NotFound from "./pages/NotFound";
+import Features from "./pages/Features";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/features" element={<Features />} />
             
             {/* Dashboard Routes */}
             <Route path="/dashboard" element={<Dashboard />} />
