@@ -152,11 +152,34 @@ Last updated: ${new Date().toLocaleDateString()}`
                         <SelectTrigger>
                           <SelectValue placeholder="Select industry" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="max-h-[300px] overflow-y-auto">
                           <SelectItem value="e-commerce">E-commerce</SelectItem>
+                          <SelectItem value="ecommerce-dropshipping">eCommerce & Dropshipping</SelectItem>
+                          <SelectItem value="saas">SaaS (Software-as-a-Service) Startups</SelectItem>
+                          <SelectItem value="digital-agency">Digital Agencies</SelectItem>
+                          <SelectItem value="freelancer">Freelancers (Designers, Developers, Marketers)</SelectItem>
+                          <SelectItem value="online-courses">Online Course Creators / Info Product Sellers</SelectItem>
+                          <SelectItem value="mobile-app">Mobile App Developers</SelectItem>
+                          <SelectItem value="chrome-extension">Chrome Extension Developers</SelectItem>
+                          <SelectItem value="bloggers">Bloggers & Content Creators</SelectItem>
+                          <SelectItem value="affiliate-marketing">Affiliate Marketers</SelectItem>
+                          <SelectItem value="fintech">Fintech & Crypto Platforms</SelectItem>
+                          <SelectItem value="defi">DeFi Apps</SelectItem>
+                          <SelectItem value="healthcare">Healthcare & Wellness Platforms</SelectItem>
+                          <SelectItem value="real-estate">Real Estate Websites</SelectItem>
+                          <SelectItem value="education">Educational Platforms & EdTech</SelectItem>
+                          <SelectItem value="no-code">No-Code and Low-Code App Builders</SelectItem>
+                          <SelectItem value="legal-tech">LegalTech Startups</SelectItem>
+                          <SelectItem value="travel">Travel & Booking Platforms</SelectItem>
+                          <SelectItem value="marketplaces">Marketplaces & Classified Ad Sites</SelectItem>
+                          <SelectItem value="job-boards">Job Boards & HR Tools</SelectItem>
+                          <SelectItem value="influencers">Influencers with Websites or Newsletters</SelectItem>
+                          <SelectItem value="membership">Membership Sites / Community Platforms</SelectItem>
+                          <SelectItem value="lead-generation">Lead Generation Sites</SelectItem>
+                          <SelectItem value="web-hosting">Web Hosting & Domain Providers</SelectItem>
+                          <SelectItem value="nonprofits">Nonprofits Collecting Data</SelectItem>
+                          <SelectItem value="event-management">Event Management & Ticketing Platforms</SelectItem>
                           <SelectItem value="software">Software/SaaS</SelectItem>
-                          <SelectItem value="healthcare">Healthcare</SelectItem>
-                          <SelectItem value="education">Education</SelectItem>
                           <SelectItem value="finance">Finance</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
