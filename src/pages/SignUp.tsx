@@ -1,25 +1,59 @@
 
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/components/ui/sonner";
 
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [acceptTerms, setAcceptTerms] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // This would normally handle registration
-    console.log("Sign Up with:", { name, email, password, acceptTerms });
-    // For demo purposes, redirect to dashboard
-    window.location.href = "/dashboard";
+    if (!acceptTerms) {
+      toast.error("Please accept the terms and conditions");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            full_name: name,
+          },
+        },
+      });
+
+      if (error) {
+        toast.error("Failed to sign up", {
+          description: error.message,
+        });
+      } else {
+        toast.success("Account created successfully", {
+          description: "Check your email for confirmation instructions.",
+        });
+        navigate("/dashboard");
+      }
+    } catch (err) {
+      console.error("Sign up error:", err);
+      toast.error("An unexpected error occurred");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -87,8 +121,8 @@ const SignUp = () => {
                 </Label>
               </div>
             </div>
-            <Button type="submit" className="w-full" disabled={!acceptTerms}>
-              Create Account
+            <Button type="submit" className="w-full" disabled={loading || !acceptTerms}>
+              {loading ? "Creating account..." : "Create Account"}
             </Button>
           </form>
           <div className="text-center">
