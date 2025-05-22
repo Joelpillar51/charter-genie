@@ -110,6 +110,10 @@
   .document-card {
     @apply p-4 border rounded-lg transition-all hover:shadow-md hover:border-primary/20;
   }
+  
+  .hero-gradient {
+    @apply bg-gradient-to-br from-blue-50 via-indigo-50/60 to-purple-50/80 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/30;
+  }
 }
 
 @keyframes fadeIn {
@@ -134,6 +138,18 @@
   }
 }
 
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
@@ -141,3 +157,8 @@
 .animate-slide-in-right {
   animation: slideInRight 0.5s ease-out forwards;
 }
+
+.animate-float {
+  animation: floatAnimation 4s ease-in-out infinite;
+}
+
