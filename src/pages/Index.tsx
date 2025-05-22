@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Check, CheckIcon, ShieldCheckIcon, X } from "lucide-react";
+import { Check, CheckIcon, ShieldCheck, ShieldCheckIcon, X } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -11,19 +11,22 @@ const Index = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative py-20 md:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950">
-          <div className="container px-4 md:px-6">
+        {/* Hero Section with Gradient and Animation */}
+        <section className="relative py-20 md:py-28 bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3NjgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cmVjdCBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3NjgiLz48Y2lyY2xlIHN0cm9rZT0iI0YzRjNGMyIgc3Ryb2tlLXdpZHRoPSIyNCIgY3g9IjcyMCIgY3k9IjM4NCIgcj0iMjk1LjUiLz48Y2lyY2xlIHN0cm9rZT0iI0YzRjNGMyIgc3Ryb2tlLXdpZHRoPSIyNCIgY3g9IjcyMCIgY3k9IjM4NCIgcj0iMzQ3LjUiLz48Y2lyY2xlIHN0cm9rZT0iI0YzRjNGMyIgc3Ryb2tlLXdpZHRoPSIyNCIgY3g9IjcyMCIgY3k9IjM4NCIgcj0iMzk5LjUiLz48L2c+PC9zdmc+')]" style={{ opacity: 0.05 }}></div>
+          
+          <div className="container px-4 md:px-6 relative z-10">
             <div className="flex flex-col items-center text-center space-y-8">
-              <div className="space-y-4 max-w-3xl">
+              <div className="space-y-4 max-w-3xl animate-fade-in">
+                <div className="text-primary font-medium mb-2 animate-slide-in-right">All-In-One Legal Solution</div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-                  Generate bulletproof legal documents with AI
+                  <span className="text-primary">Generate bulletproof</span> legal documents with AI
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                   Create legally compliant privacy policies, terms of service, and GDPR documentation in minutes, not days.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
                 <Button asChild size="lg" className="font-medium">
                   <Link to="/signup">Get Started Free</Link>
                 </Button>
@@ -31,12 +34,28 @@ const Index = () => {
                   <Link to="/demo">Watch Demo</Link>
                 </Button>
               </div>
-              <div className="pt-8 w-full max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
+              <div className="pt-8 w-full max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in" style={{ animationDelay: "0.4s" }}>
                 <img
                   src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80"
                   alt="CharterGenie Dashboard Preview"
                   className="w-full h-auto object-cover border rounded-xl"
                 />
+              </div>
+              
+              {/* Trust Indicators */}
+              <div className="flex items-center justify-center space-x-6 pt-6 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+                <div className="flex items-center space-x-2">
+                  <ShieldCheck className="h-5 w-5 text-primary" />
+                  <span className="text-sm text-muted-foreground">GDPR Compliant</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <ShieldCheck className="h-5 w-5 text-primary" />
+                  <span className="text-sm text-muted-foreground">CCPA Ready</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <ShieldCheck className="h-5 w-5 text-primary" />
+                  <span className="text-sm text-muted-foreground">Legal Approved</span>
+                </div>
               </div>
             </div>
           </div>
